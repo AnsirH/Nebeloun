@@ -182,7 +182,7 @@ namespace BitSplash.AI.GPT
 #if UNITY_2023_1_OR_NEWER
             var webRequest = UnityWebRequest.PostWwwForm(Authentication.CompletionUrl, string.Empty);
 #else
-            var webRequest = UnityWebRequest.Post(Authentication.CompletionUrl, string.Empty);
+            var webRequest = UnityWebRequest.PostWwwForm(Authentication.CompletionUrl, string.Empty);
 #endif
             webRequest.SetRequestHeader("Authorization", $"Bearer {Authentication.PrivateApiKey}");
             //webRequest.SetRequestHeader("User-Agent", "Bitsplash/ChatGpt");
